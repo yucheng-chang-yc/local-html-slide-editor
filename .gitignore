@@ -1,0 +1,26 @@
+node_modules/
+dist/
+.data/
+playwright-report/
+test-results/
+coverage/
+evidence/
+*.log
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# OS and editor state
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.tmp

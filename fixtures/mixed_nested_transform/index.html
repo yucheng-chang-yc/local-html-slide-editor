@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mixed Risk</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <main id="mixed-root" class="responsive-layout">
+    <h1 id="safe-title">未受限標題</h1>
+    <p id="safe-text">這段文字位於正常 flow，可安全修改及格式化。</p>
+    <div id="risk-root" class="nested-transform" style="transform:rotate(2deg) translateX(12px)">
+      <p id="risk-text">此子樹的拖拉與縮放需先轉為自由定位。</p>
+    </div>
+    <section id="safe-section"><p id="safe-footer">受限子樹之外仍可自由插入與匯出。</p></section>
+  </main>
+</body>
+</html>

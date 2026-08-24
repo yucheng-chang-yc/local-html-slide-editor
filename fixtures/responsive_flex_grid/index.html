@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Responsive 編輯測試</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="responsive-root" class="responsive-grid">
+    <header class="hero-flex">
+      <div>
+        <h1 id="responsive-title" class="hero-title">一般 Responsive 版面</h1>
+        <p id="responsive-subtitle" class="hero-subtitle">Flow、Flex 與 Grid 仍可安全修改文字及格式。</p>
+      </div>
+      <img id="responsive-image" src="assets/sample.svg" alt="fixture image">
+    </header>
+    <section class="card-grid" aria-label="內容卡片">
+      <article><h2 id="card-one-title">第一張卡片</h2><p>可選取、修改與匯出。</p></article>
+      <article><h2 id="card-two-title">第二張卡片</h2><p>不同文字樣式會正確同步 inspector。</p></article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>邊界版面測試</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="responsive-slide" id="boundary-slide">
+    <article class="flow-card" id="flow-card">
+      <h1>Responsive Flow Layout</h1>
+      <p>此元素尺寸依容器與內容流動，不應被靜默轉換後破壞。</p>
+    </article>
+    <div class="transformed-parent" id="transformed-parent">
+      <div class="transformed-child" id="transformed-child">Nested transform</div>
+    </div>
+    <svg id="inline-svg" viewBox="0 0 160 100" role="img" aria-label="SVG 測試">
+      <rect x="10" y="10" width="140" height="80" rx="12"/>
+      <text x="80" y="58" text-anchor="middle">SVG</text>
+    </svg>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

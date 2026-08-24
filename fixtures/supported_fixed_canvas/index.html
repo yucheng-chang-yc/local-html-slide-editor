@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>受支援固定畫布測試簡報</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="deck" aria-label="測試簡報">
+    <section class="slide active" id="slide-1" data-slide="1">
+      <div class="badge" id="badge-1">Stage 0</div>
+      <h1 id="title-1">本地 HTML 簡報編輯器</h1>
+      <p id="subtitle-1">拖拉、插入、匯出與重新開啟的固定畫布測試。</p>
+      <img id="image-1" src="assets/sample.svg" alt="幾何測試圖">
+      <div class="shape" id="shape-1" aria-label="裝飾矩形"></div>
+    </section>
+    <section class="slide" id="slide-2" data-slide="2">
+      <h2 id="title-2">第二張投影片</h2>
+      <p id="body-2">原始導覽腳本必須在匯出後保持運作。</p>
+      <div class="card" id="card-2">可移動卡片</div>
+    </section>
+  </main>
+  <nav class="controls" aria-label="投影片導覽">
+    <button id="prev" type="button">上一頁</button>
+    <output id="counter">1 / 2</output>
+    <button id="next" type="button">下一頁</button>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>

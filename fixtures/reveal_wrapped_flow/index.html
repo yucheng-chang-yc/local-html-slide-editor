@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>Reveal Wrapped Flow</title>
+<style>
+  body{margin:0;background:#f3f4f5}
+  .slide{position:relative;width:1600px;height:900px;background:#fff;overflow:hidden}
+  .reveal{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
+  .slide.visible .reveal{opacity:1;transform:translateY(0)}
+  [data-frag]{opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
+  [data-frag].frag-on{opacity:1;transform:translateY(0)}
+  .flow-row{display:flex;gap:16px;padding:80px}
+  .chip{padding:16px 20px;border-radius:8px;background:#eef2ff;font:16px system-ui,sans-serif}
+  .frag-row{display:flex;gap:16px;padding:0 80px}
+  .frag-chip{padding:12px 16px;border-radius:8px;background:#fef3c7;font:14px system-ui,sans-serif}
+</style>
+</head>
+<body>
+  <!--
+    Regression fixture for the "reveal-wrapped nested drag" bug: the
+    animation class sits on an OUTER wrapper div, not on the elements the
+    user actually selects/drags/resizes/rotates. This differs from other
+    fixtures where .reveal/[data-frag] sit directly on the interactive
+    leaf element, and is the exact structural shape that let a stale
+    transform on an ancestor confuse offsetParent/geometry math.
+  -->
+  <section class="slide" data-title="Reveal Wrapped Flow" aria-label="第 1 頁">
+    <div class="reveal" style="--d:.2s">
+      <div class="flow-row">
+        <div class="chip" id="chip-1">Step 1</div>
+        <div class="chip" id="chip-2">Step 2</div>
+        <div class="chip" id="chip-3">Step 3</div>
+      </div>
+    </div>
+    <div class="frag-row">
+      <div class="frag-chip" id="frag-1" data-frag="1">Frag A</div>
+      <div class="frag-chip" id="frag-2" data-frag="2">Frag B</div>
+    </div>
+  </section>
+</body>
+</html>

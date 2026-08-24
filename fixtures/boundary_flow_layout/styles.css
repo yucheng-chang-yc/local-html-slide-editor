@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f1f5f9; }
+.responsive-slide { min-height: 100vh; display: flex; flex-wrap: wrap; gap: 3vw; align-items: center; justify-content: center; padding: 5vw; }
+.flow-card { flex: 1 1 420px; max-width: 720px; padding: 32px; background: white; border-radius: 24px; }
+.transformed-parent { transform: rotate(-4deg) scale(.95); transform-origin: center; padding: 34px; background: #bfdbfe; }
+.transformed-child { transform: translate(18px, 12px); padding: 28px; background: #1d4ed8; color: white; }
+#inline-svg { width: min(42vw, 420px); fill: #facc15; stroke: #0f172a; stroke-width: 3; }
+#inline-svg text { fill: #0f172a; stroke: none; font-size: 24px; font-weight: 700; }

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <title>腳本啟用投影片測試</title>
+  <style>
+    html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#e2e8f0}
+    #deck{position:relative;width:960px;height:540px;margin:auto;background:white}
+    .slide{position:absolute;inset:0;display:block;visibility:hidden;opacity:0;pointer-events:none;padding:64px}
+    .slide.active,.slide.visible{visibility:visible;opacity:1;pointer-events:auto}
+    .reveal{opacity:0;transform:translateY(12px)}
+    .slide.visible .reveal{opacity:1;transform:none}
+    nav{position:fixed;bottom:12px;left:12px}
+  </style>
+</head>
+<body>
+  <main id="deck">
+    <section class="slide" data-title="第一頁"><h1 id="script-title" class="reveal">腳本啟用的第一頁</h1><p id="script-subtitle" class="reveal">可批次調整的副標題</p></section>
+    <section class="slide" data-title="第二頁"><h2 id="script-second">第二頁</h2></section>
+  </main>
+  <nav><button type="button">下一頁</button></nav>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var first = document.querySelector('.slide');
+      first.classList.add('active', 'visible');
+    });
+  </script>
+</body>
+</html>
